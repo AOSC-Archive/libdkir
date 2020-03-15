@@ -1,13 +1,11 @@
 namespace Dk {
-/**
- * Models representing information in a DeployKit Internal Representation (DKIR) document.
- */
-namespace Ir {
+
+using Ir;
 
 /**
  * The DKIR document object.
  */
-public class Ir : Object {
+public class IR : Object {
   private int version;
   private PartitionInfo partition;
   private ExtractInfo extract;
@@ -16,7 +14,7 @@ public class Ir : Object {
   private Gee.ArrayList<OverrideInfo> overrides;
   private BootLoaderInfo bootloader;
 
-  public Ir() {
+  public IR() {
     this.version = -1;
     this.partition = new PartitionInfo();
     this.extract = new ExtractInfo();
@@ -340,5 +338,4 @@ public class Ir : Object {
   }
 }
 
-}
 }

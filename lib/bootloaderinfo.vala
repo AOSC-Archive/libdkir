@@ -1,4 +1,7 @@
 namespace Dk {
+/**
+ * Models representing information in a DeployKit Internal Representation (DKIR) document.
+ */
 namespace Ir {
 
 /**
