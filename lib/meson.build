@@ -13,4 +13,13 @@ libdkir_srcs = files(
   'bootloaderinfo.vala',
 )
 
-library('dkir', libdkir_srcs, dependencies: libdkir_deps, install: true)
+# The [true, true, true] in install_dir tells meson to install the generated
+# VAPI file and C header file. See:
+# https://mesonbuild.com/Vala.html#changing-c-header-and-vapi-names
+library(
+  'dkir',
+  libdkir_srcs,
+  dependencies: libdkir_deps,
+  install: true,
+  install_dir: [true, true, true],
+)
